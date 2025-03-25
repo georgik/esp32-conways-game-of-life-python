@@ -16,7 +16,7 @@ def init_grid():
 
 def update_grid(grid):
     """Compute the next generation using Conway's rules with age tracking.
-    
+
     A live cell (grid[y][x] > 0) survives with 2 or 3 live neighbors and ages.
     A dead cell (0) becomes alive with exactly 3 live neighbors.
     """
@@ -48,9 +48,9 @@ import colorsys
 
 def get_fill_color(age):
     """Return an RGB tuple for the fill color based on the cell's age.
-    
-    Younger cells are rendered as a lighter, saturated blue, while older cells 
-    transition toward white. The saturation decreases and brightness increases 
+
+    Younger cells are rendered as a lighter, saturated blue, while older cells
+    transition toward white. The saturation decreases and brightness increases
     with age.
     """
     max_age = 10  # maximum age for color scaling
