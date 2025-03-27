@@ -18,3 +18,15 @@ pip install -r requirements.txt
 python3 conway.py
 ```
 
+## NuttX and Python
+
+Simulator on desktop
+
+```shell
+cd nuttx
+pip install -r requirements.txt
+python simulator.py
+```
+
+Running on NuttX:
+- change device `/tmp/leds0` to `/dev/leds0`
