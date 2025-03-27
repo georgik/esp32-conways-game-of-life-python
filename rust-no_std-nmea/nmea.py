@@ -9,14 +9,9 @@ def print_optional_double(label, value, unit=""):
 
 def print_optional_coord(label, coord, dir_str):
     if not math.isnan(coord):
-        # NMEA coordinates are in ddmm.mmmm (or dddmm.mmmm) format.
-        # Extract degrees and minutes:
-        sign = -1 if coord < 0 else 1
-        coord_abs = abs(coord)
-        deg = int(coord_abs // 100)
-        minutes = coord_abs - (deg * 100)
-        deg = deg * sign
-        print("- {}: {}°{:.4f}' {}".format(label, deg, minutes, dir_str))
+        deg = math.floor(coord)
+        minute = (coord - deg) * 60.0
+        print("- {}: {:.0f}°{:.4f}' {}".format(label, deg, minute, dir_str))
     else:
         print("- {}: N/A".format(label))
 
