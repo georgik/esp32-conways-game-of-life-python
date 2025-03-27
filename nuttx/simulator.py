@@ -7,7 +7,7 @@ import sdl3
 PIPE_PATH = "/tmp/leds0"
 
 # SDL3 window dimensions
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 600, 600
 
 def init_sdl():
     if not sdl3.SDL_Init(sdl3.SDL_INIT_VIDEO):
@@ -106,7 +106,7 @@ def main():
         # Render the LED matrix.
         sdl3.SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255)
         sdl3.SDL_RenderClear(renderer)
-         gamma = 60
+        gamma = 60
 
         if current_frame and len(current_frame) >= 64:
             # Use the first 64 LEDs to form an 8x8 matrix.
